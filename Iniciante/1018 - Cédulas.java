@@ -8,23 +8,18 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		int notas[] = {100, 50, 20, 10, 5, 2, 1};
+		int quantidade;
+		
 		int valor = sc.nextInt();
 		
+		System.out.println(valor);
 		if (valor > 0 && valor < 1000000) {
-			System.out.println(valor);
-			System.out.printf("%d nota(s) de R$ 100,00%n", valor / 100);
-			valor %= 100;
-			System.out.printf("%d nota(s) de R$ 50,00%n", valor / 50);
-			valor %= 50;
-			System.out.printf("%d nota(s) de R$ 20,00%n", valor / 20);
-			valor %= 20;
-			System.out.printf("%d nota(s) de R$ 10,00%n", valor / 10);
-			valor %= 10;
-			System.out.printf("%d nota(s) de R$ 5,00%n", valor / 5);
-			valor %= 5;
-			System.out.printf("%d nota(s) de R$ 2,00%n", valor / 2);
-			valor %= 2;
-			System.out.printf("%d nota(s) de R$ 1,00%n", valor / 1);
+			for (int i = 0; i < notas.length; i++) {
+				quantidade = (valor / notas[i]);
+				System.out.printf("%d nota(s) de R$ %d,00%n", quantidade, notas[i]);
+				valor %= notas[i];
+			}
 		}
 		
 		sc.close();
