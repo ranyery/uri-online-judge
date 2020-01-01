@@ -30,7 +30,7 @@ public class Main {
 				System.out.println("Aluno reprovado.");
 				System.out.printf("Media final: %.1f%n", novaMedia);
 			}
-		}else {
+		} else {
 			System.out.println("Aluno aprovado.");
 		}
 		
